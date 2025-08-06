@@ -1,5 +1,5 @@
 📦 Amigo Secreto App - README
-<div align="center"> <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat&logo=javascript" alt="JavaScript"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3"> <img src="https://img.shields.io/badge/license-MIT-blue" alt="License"> </div>
+<div align="center"> <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat&logo=javascript" alt="JavaScript"> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3"> </div>
 
 ✨ Una aplicación web elegante y funcional para organizar tu juego de Amigo Secreto ✨
 🌟 Características principales
