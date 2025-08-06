@@ -49,11 +49,12 @@ Tecnología	Descripción
 https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white	Estructura semántica del documento
 https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white	Estilos modernos y animaciones
 https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black	Lógica de la aplicación y algoritmo de sorteo
-https://img.shields.io/badge/-Google_Fonts-4285F4?logo=googlefonts&logoColor=white	Tipografías Inter y Merriweather
-📂 Estructura del proyecto
-text
 
-amigo-secreto/
+📂 Estructura del proyecto
+
+```text
+
+amigo-secreto-alura/
 ├── index.html          # Archivo principal HTML
 ├── style.css           # Estilos principales
 ├── app.js              # Lógica de la aplicación
@@ -63,6 +64,7 @@ amigo-secreto/
 │   ├── close.png
 │   └── play_circle_outline.png
 └── README.md           # Este archivo
+```
 
 🌈 Diseño UI/UX
 
@@ -90,6 +92,8 @@ El corazón de la aplicación utiliza un algoritmo de emparejamiento con reinten
 
     Garantiza resultados válidos o muestra mensaje de error claro
 
+```javascript
+
 javascript
 
 // Pseudocódigo del algoritmo
@@ -106,6 +110,7 @@ function sortearAmigos() {
   }
   throw new Error("No se pudo completar el sorteo");
 }
+```
 
 📱 Responsive Design
 
