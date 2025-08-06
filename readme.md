@@ -96,19 +96,77 @@ El corazón de la aplicación utiliza un algoritmo de emparejamiento con reinten
 
 javascript
 
-// Pseudocódigo del algoritmo
-function sortearAmigos() {
-  while (intentos < 100) {
-    try {
-      // Intentar emparejamiento
-      if (emparejamientoValido) {
-        return resultados;
-      }
-    } catch {
-      intentos++;
+
+function sortearAmigo() {
+    const resultado = document.getElementById('resultado');
+    
+    if (amigos.length < 2) {
+        resultado.innerHTML = '<li class="result-item">Necesitas al menos 2 amigos para sortear</li>';
+        return;
     }
-  }
-  throw new Error("No se pudo completar el sorteo");
+    
+    let emparejamientos = [];
+    let disponibles = [...amigos];
+    
+    // Intentar hacer el sorteo (puede fallar y necesitar reintentos)
+    let intentos = 0;
+    const MAX_INTENTOS = 100;
+    
+    while (intentos < MAX_INTENTOS) {
+        try {
+            disponibles = [...amigos];
+            emparejamientos = [];
+            
+            for (let i = 0; i < amigos.length; i++) {
+                const persona = amigos[i];
+                // Filtrar para que no sea el mismo y no repita emparejamientos
+                let opciones = disponibles.filter(a => a !== persona);
+                
+                // Si no hay opciones válidas, lanzar error para reintentar
+                if (opciones.length === 0) {
+                    throw new Error("Necesita reintento");
+                }
+                
+                // Seleccionar aleatoriamente
+                const indiceAleatorio = Math.floor(Math.random() * opciones.length);
+                const amigoSecreto = opciones[indiceAleatorio];
+                
+                emparejamientos.push({
+                    persona: persona,
+                    secreto: amigoSecreto
+                });
+                
+                // Eliminar el amigo secreto de disponibles
+                disponibles = disponibles.filter(a => a !== amigoSecreto);
+            }
+            
+            // Si llegamos aquí, el sorteo fue exitoso
+            break;
+        } catch (e) {
+            intentos++;
+            if (intentos >= MAX_INTENTOS) {
+                resultado.innerHTML = '<li class="result-item">No se pudo realizar el sorteo. Intenta nuevamente.</li>';
+                return;
+            }
+        }
+    }
+    
+    // Mostrar resultados
+    let html = '';
+    emparejamientos.forEach(par => {
+        html += `
+            <li class="result-item">
+                <span class="persona">${par.persona}</span>
+                <span class="amigo-secreto"> > </span>
+                <span class="amigo-secreto">${par.secreto}</span>
+            </li>
+        `;
+    });
+    
+    resultado.innerHTML = html;
+    
+    revelarResultados();
+}
 }
 ```
 
