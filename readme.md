@@ -117,6 +117,7 @@ La aplicación se adapta perfectamente a:
 
     Teléfonos móviles
 
+```css
 css
 
 @media (max-width: 600px) {
@@ -124,6 +125,7 @@ css
     flex-direction: column;
   }
 }
+```
 
 🎨 Personalización
 
@@ -135,7 +137,5 @@ Fácilmente puedes personalizar:
 
     Iconos: Reemplaza los SVG en la carpeta assets
 
-📜 Licencia
 
-Este proyecto está bajo la licencia MIT. Ver archivo LICENSE para más detalles.
 <div align="center"> <h3>¿Te gustó el proyecto?</h3> <p>¡Dale una ⭐ y compártelo con tus amigos!</p> <p>🎄 Perfecto para navidades, cumpleaños o cualquier evento especial 🎉</p> </div>
